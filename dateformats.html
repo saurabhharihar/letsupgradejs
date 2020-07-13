@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo"></p>
+<script>
+var d = new Date();
+var day=d.getDay();
+var hours=d.getUTCHours();
+var ampm = hours >= 12 ? 'PM' : 'AM';
+  hours = hours % 12;
+  hours = hours ? hours : 12;
+var yr=d.getFullYear();
+var mn=d.getMonth()+1;
+var dt=d.getDate();
+var nday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+document.getElementById("demo").innerHTML =mn+'-'+dt+"-"+yr+" "+","+mn+"/"+dt+"/"+yr;
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo"></p>
+<script>
+var d = new Date();
+var day=d.getDay();
+var hours=d.getUTCHours();
+var ampm = hours >= 12 ? 'PM' : 'AM';
+  hours = hours % 12;
+  hours = hours ? hours : 12;
+var m=d.getMinutes();
+var s=d.getSeconds();
+var nday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+document.getElementById("demo").innerHTML = 'Today is : '+nday[day]+'\n'+'Current time is :'+hours+'  '+ampm+':'+m+':'+s;
+</script>
+</body>
+</html>
